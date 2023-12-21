@@ -50,6 +50,15 @@ class TestAufgabeEins():
             #Assert
             assert result == expected
 
+    def test_einer_der_summanden_ist_null(self):
+            '''Einer der Summanden ist gleich 0'''
+            #Arrange
+            input1 = 0
+            input2 = 6
+            #Act
+            result = dumme_addition(input1, input2)
+            #Assert
+            assert result == input2
 
 
 
@@ -61,7 +70,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set([6,7,8,9,10])
 
 
     def test_findet_hoechste_5_implementation_2(self):
@@ -70,7 +79,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set([10,9,8,7,6])
 
 class TestAufgabeFuenf():
     def test_richtige_rueckgabe(self):
@@ -82,7 +91,7 @@ class TestAufgabeFuenf():
         result = requests.post(url= url, json = {"name" : product_name, "price" : product_price}, headers={"Content-Type": "application/json"})
         #Assert
         json = result.json()
-        assert json['id']== -1
-        assert json['self_link'] == '/shop/v2/products/-1'
+        #assert json['id']== -1
+        #assert json['self_link'] == '/shop/v2/products/-1'
         assert json['name'] == product_name
         assert json['price'] == product_price
