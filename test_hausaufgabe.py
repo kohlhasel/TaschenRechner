@@ -15,6 +15,16 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
 
+    def test_happy_path2(self):
+        '''a wird mit 0 addiert'''
+        # Arrange
+        input1 = 5
+        input2 = 0
+        # Act
+        result = dumme_addition(input1, input2)
+        # Assert
+        assert result == input1
+
 
 
     def test_assoziativ(self):
@@ -61,8 +71,9 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
-
+        assert len(result.möglichkeiten) == 2
+        assert result == [6,7,8,9,10] in result.möglichkeiten
+        assert result == [10,9,8,7,6] in result.möglichkeiten
 
     def test_findet_hoechste_5_implementation_2(self):
         #Arrange
@@ -70,7 +81,9 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert len(result.möglichkeiten) == 2
+        assert result == [6,7,8,9,10] in result.möglichkeiten
+        assert result == [10,9,8,7,6] in result.möglichkeiten
 
 class TestAufgabeFuenf():
     def test_richtige_rueckgabe(self):
