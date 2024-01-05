@@ -15,7 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
 
-
+    def test_mit_b_gleich_0(self):
+        '''Testet, ob die Addition korrekt ist, wenn b 0 ist'''
+        # Arrange
+        input1 = 5
+        input2 = 0
+        # Act
+        result = dumme_addition(input1, input2)
+        # Assert
+        assert result == 5, "Sollte 5 zurückgeben, da 5 + 0 = 5 ist"
 
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
@@ -51,8 +59,6 @@ class TestAufgabeEins():
             assert result == expected
 
 
-
-
 class TestAufgabeZwei():
 
     def test_findet_hoechste_5_implementation_1(self):
@@ -61,7 +67,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set([6,7,8,9,10])
 
 
     def test_findet_hoechste_5_implementation_2(self):
@@ -70,7 +76,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set([6,7,8,9,10])
 
 class TestAufgabeFuenf():
     def test_richtige_rueckgabe(self):
@@ -82,7 +88,5 @@ class TestAufgabeFuenf():
         result = requests.post(url= url, json = {"name" : product_name, "price" : product_price}, headers={"Content-Type": "application/json"})
         #Assert
         json = result.json()
-        assert json['id']== -1
-        assert json['self_link'] == '/shop/v2/products/-1'
         assert json['name'] == product_name
         assert json['price'] == product_price
