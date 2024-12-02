@@ -20,23 +20,6 @@ class Taschenrechner(BaseModel):
 
     def multiplikation(self, a, b):
         print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
-        print('Wenn ich in der Konsole zu sehen bin, dann gibt es einen Fehler')
         return self.converter.str_to_int(a) * self.converter.str_to_int(b)
 
     def division(self, a, b):
