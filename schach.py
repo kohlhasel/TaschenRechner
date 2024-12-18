@@ -146,6 +146,7 @@ class Springer(Figur):
         bewegt.append(self.position.plus(-1,2))
         bewegt.append(self.position.plus(2,-1))
         bewegt.append(self.position.plus(-1,-2))
+        bewegt.append(self.position.plus(-2,-1))
 
         bewegt = [x for x in bewegt if x in brett.brett]
 
