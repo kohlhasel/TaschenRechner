@@ -136,7 +136,40 @@ def gegner_farbe(figur: Figur):
     else:
         return 'neutral'
 
+class Springer(Figur):
+    def moegliche_zuege(self, brett: 'Schachbrett', beachte_bedrohung=True) -> Zuege:
+        bewegt = []
+        bewegt.append(self.position.plus(2,1))
+        bewegt.append(self.position.plus(1,2))
+        bewegt.append(self.position.plus(1,-2))
+        bewegt.append(self.position.plus(-2,1))
+        bewegt.append(self.position.plus(-1,2))
+        bewegt.append(self.position.plus(2,-1))
+        bewegt.append(self.position.plus(-1,-2))
 
+        bewegt = [x for x in bewegt if x in brett.brett]
+
+        schlaegt = [x for x in bewegt]
+        if beachte_bedrohung:
+            ret_schlaegt = []
+            ret_bewegt = []
+            for zug in schlaegt:
+                self.probier_zug_aus_ob_er_legal_waere(brett, ret_schlaegt, zug)
+            for zug in bewegt:
+                self.probier_zug_aus_ob_er_legal_waere(brett, ret_bewegt, zug)
+
+            return Zuege(bewegt=ret_bewegt, schlaegt=ret_schlaegt)
+
+        return Zuege(schlaegt = schlaegt, bewegt=bewegt)
+    def probier_zug_aus_ob_er_legal_waere(self, brett, ret_schlaegt, zug):
+        ausprobier_brett = Schachbrett()
+        ausprobier_brett.brett = deepcopy(brett.brett)
+        leeres_feld_figur = LeeresFeld(position=self.position, farbe='neutral')
+        ausprobier_brett.setze_Figur(leeres_feld_figur)
+        ausprobier_figur = Laeufer(position=zug, farbe=self.farbe)
+        ausprobier_brett.setze_Figur(ausprobier_figur)
+        if not ausprobier_brett.ist_Koenig_von_farbe_in_schach(self.farbe):
+            ret_schlaegt.append(zug)
 class Laeufer(Figur):
 
     def moegliche_zuege(self, brett: 'Schachbrett', beachte_bedrohung=True) -> Zuege:
