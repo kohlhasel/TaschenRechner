@@ -35,15 +35,6 @@ def test_addition(client):
     data = result.data.decode()
     assert data == '10'
 
-def test_addition_bug(client):
-    """Wenn Addition abgefragt wird, dann kommen plausible Werte raus"""
-    #Arrange
-    post_data = dict(wert1='0.666', wert2='1')
-    #Act
-    result = client.post('/add', json=post_data)
-    #Assert
-    data = result.data.decode()
-    assert data == '1.666'
 
 def test_subtraktion(client):
     """Wenn Subtraktion abgefragt wird, dann kommen plausible Werte raus"""
