@@ -205,3 +205,70 @@ class Laeufer(Figur):
         ausprobier_brett.setze_Figur(ausprobier_figur)
         if not ausprobier_brett.ist_Koenig_von_farbe_in_schach(self.farbe):
             ret_schlaegt.append(zug)
+
+class Turm(Figur):
+    def moegliche_zuege(self, brett: 'Schachbrett', beachte_bedrohung=True) -> Zuege:
+        ret = []
+        for i in range(7):
+            position = self.position.plus(i + 1, 0)
+            if position in brett.brett:
+                figur = brett.brett[position]
+                if figur.farbe == 'neutral':
+                    ret.append(position)
+                else:
+                    if figur.farbe != self.farbe:
+                        ret.append(position)
+                    break
+        for i in range(7):
+            position = self.position.plus(-1 -i, 0)
+            if position in brett.brett:
+                figur = brett.brett[position]
+                if figur.farbe == 'neutral':
+                    ret.append(position)
+                else:
+                    if figur.farbe != self.farbe:
+                        ret.append(position)
+                    break
+        for i in range(7):
+            position = self.position.plus(0, i+1)
+            if position in brett.brett:
+                figur = brett.brett[position]
+                if figur.farbe == 'neutral':
+                    ret.append(position)
+                else:
+                    if figur.farbe != self.farbe:
+                        ret.append(position)
+                    break
+        for i in range(7):
+            position = self.position.plus(0,-1-i)
+            if position in brett.brett:
+                figur = brett.brett[position]
+                if figur.farbe == 'neutral':
+                    ret.append(position)
+                else:
+                    if figur.farbe != self.farbe:
+                        ret.append(position)
+                    break
+
+        ret = [x for x in ret if x in brett.brett]
+        schlaegt = [x for x in ret]
+        bewegt = [ x for x in ret]
+        if beachte_bedrohung:
+            ret_schlaegt = []
+            ret_bewegt = []
+            for zug in schlaegt:
+                self.probier_zug_aus_ob_er_legal_waere(brett, ret_schlaegt, zug)
+            for zug in bewegt:
+                self.probier_zug_aus_ob_er_legal_waere(brett, ret_bewegt, zug)
+
+            return Zuege(bewegt=ret_bewegt, schlaegt=ret_schlaegt)
+        return Zuege(bewegt=ret, schlaegt=[x for x in ret])
+    def probier_zug_aus_ob_er_legal_waere(self, brett, ret_schlaegt, zug):
+        ausprobier_brett = Schachbrett()
+        ausprobier_brett.brett = deepcopy(brett.brett)
+        leeres_feld_figur = LeeresFeld(position=self.position, farbe='neutral')
+        ausprobier_brett.setze_Figur(leeres_feld_figur)
+        ausprobier_figur = Laeufer(position=zug, farbe=self.farbe)
+        ausprobier_brett.setze_Figur(ausprobier_figur)
+        if not ausprobier_brett.ist_Koenig_von_farbe_in_schach(self.farbe):
+            ret_schlaegt.append(zug)

@@ -9,5 +9,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-RUN  python -m coverage run -m pytest && python -m coverage report --omit test_hausaufgabe.py --fail-under=80
+RUN  python -m coverage run -m pytest && python -m coverage report --fail-under=80
 
