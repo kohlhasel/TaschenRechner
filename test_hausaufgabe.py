@@ -1,7 +1,7 @@
 import pytest
 import requests as requests
 
-from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1, groesste_n_zahlen_implementation_2
+from Hausaufgabe import dumme_addition, groesste_n_zahlen_implementation_1, groesste_n_zahlen_implementation_2
 
 
 class TestAufgabeEins():
