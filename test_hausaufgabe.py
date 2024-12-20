@@ -11,9 +11,9 @@ class TestAufgabeEins():
         input1 = 5
         input2 = 6
         # Act
-        result = dumme_multiplikation(input1, input2)
+        result = dumme_addition(input1, input2)
         # Assert
-        assert result == 30
+        assert result == 11
 
 
 
