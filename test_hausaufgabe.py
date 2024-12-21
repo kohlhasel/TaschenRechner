@@ -14,22 +14,18 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-
-    def test_multiplikation_mit_null():
-        '''Multiplikation mit 0 ergibt immer 0'''
-        # Arrange
-        input1 = 0
-        input2 = 5
-        # Act
-        result = dumme_multiplikation(input1, input2)
+        
+   def test_multiplikation_mit_null(self):
+        '''multiplikation mit 0 sollte immer 0 ergeben'''
+        #Arrange
+        a, b = 0, 5
+        c, d = 5, 0
+        #  Act
+        result1 = dumme_multiplikation(a, b)
+        result2 = dumme_multiplikation(c, d)
         # Assert
-        assert result == 0
-    
-        # Test für andere Reihenfolge der Argumente
-        input1 = 5
-        input2 = 0
-        result = dumme_multiplikation(input1, input2)
-        assert result == 0
+        assert result1 == 0, "multiplikation von 0 und einer Zahl = 0"
+        assert result2 == 0, "multiplikation einer Zahl mit 0 = 0"
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
