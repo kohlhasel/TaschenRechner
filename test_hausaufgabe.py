@@ -56,20 +56,13 @@ class TestAufgabeEins():
 class TestAufgabeZwei():
     #Sowohl implementation2 als auch implementation sind valide Antworten um die höchsten n elemente einer Liste zu finden.
     # Was wurde bei der Auswahl der Asserts falsch gemacht, sodass einer der Tests scheitert und der andere erfolgreich ist?
-    def test_findet_hoechste_5_implementation_1(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_1(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
+   def test_findet_hoechste_5_implementation_1(self):
+    liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    result = groesste_n_zahlen_implementation_1(liste, 5)
+    assert set(result) == {6, 7, 8, 9, 10}, "Implementation 1 liefert nicht die richtigen Werte"
 
-
-    def test_findet_hoechste_5_implementation_2(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_2(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
+def test_findet_hoechste_5_implementation_2(self):
+    liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    result = groesste_n_zahlen_implementation_2(liste, 5)
+    assert set(result) == {6, 7, 8, 9, 10}, "Implementation 2 liefert nicht die richtigen Werte"
 
