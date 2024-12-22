@@ -14,7 +14,20 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-
+        
+    def test_multiplikation_mit_null(self):
+        '''Multiplikation mit 0 ergibt immer 0'''
+        # Arrange
+        inputs = [
+            (0, 5),    # Einer der Faktoren ist 0
+            (5, 0),    # Einer der Faktoren ist 0
+            (0, 0)     # Beide Faktoren sind 0
+        ]
+        for a, b in inputs:
+            # Act
+            result = dumme_multiplikation(a, b)
+            # Assert
+            assert result == 0
 
 
     def test_assoziativ(self):
