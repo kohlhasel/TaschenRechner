@@ -50,6 +50,25 @@ class TestAufgabeEins():
             #Assert
             assert result == expected
 
+    def test_multiplikation_mit_null(self):
+        '''Testet, dass Multiplikation mit 0 das Ergebnis 0 liefert.'''
+        # Arrange
+        input1 = 0
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0, "Multiplikation mit 0 sollte 0 ergeben"
+        
+        # Arrange
+        input1 = 5
+        input2 = 0
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0, "Multiplikation mit 0 sollte 0 ergeben"
+
+
 
 
 
