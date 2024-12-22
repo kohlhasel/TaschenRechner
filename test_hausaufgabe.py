@@ -73,7 +73,7 @@ class TestAufgabeEins():
 
 
 class TestAufgabeZwei():
-    #Sowohl implementation2 als auch implementation sind valide Antworten um die höchsten n elemente einer Liste zu finden.
+    #Sowohl implementation2 als auch implementation sind valide Antworten um die höchsten n elemente einer Liste zu finden. 
     # Was wurde bei der Auswahl der Asserts falsch gemacht, sodass einer der Tests scheitert und der andere erfolgreich ist?
     def test_findet_hoechste_5_implementation_1(self):
         # Arrange
