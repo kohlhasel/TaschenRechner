@@ -15,6 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_both_ones(self):
+        '''1 * 1 sollte 1 ergeben'''
+        # Arrange
+        input1 = 1
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 1
 
 
     def test_assoziativ(self):
