@@ -18,11 +18,11 @@ class TestAufgabeEins():
     def test_happy_path_mit_null(self):
         '''Multiplikation mit 0 als Ergebnis immer 0'''
         # Arrange
-        faktor1 = 0
-        faktor2 = 10
+        input1 = 0
+        input2 = 10
         # Act
-        result1 = dumme_multiplikation(faktor1, faktor2)
-        result2 = dumme_multiplikation(faktor2, faktor1)
+        result1 = dumme_multiplikation(input1, input2)
+        result2 = dumme_multiplikation(input2, input1)
         # Assert
         assert result1 == 0
         assert result2 == 0
