@@ -3,7 +3,9 @@ from typing import List
 
 def dumme_multiplikation(a:int, b:int):
      # Abbruchbedingungen für 0
-    if a == 0 or b == 0:
+    if a == 0:
+        return 0
+    if b == 0:
         return 0
     if a == 1:
         return b
