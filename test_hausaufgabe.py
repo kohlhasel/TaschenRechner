@@ -29,6 +29,21 @@ class TestAufgabeEins():
             # Assert
             assert result == 0
 
+    def test_negative_values(self):
+        '''Multiplikation mit negativen Zahlen funktioniert korrekt'''
+        # Arrange
+        inputs = [
+            (-3, 4, -12),  # negativ * positiv
+            (3, -4, -12),  # positiv * negativ
+            (-3, -4, 12),  # negativ * negativ
+            (-5, 0, 0),    # negativ * 0
+        ]
+        for a, b, expected in inputs:
+            # Act
+            result = dumme_multiplikation(a, b)
+            # Assert
+            assert result == expected
+
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
