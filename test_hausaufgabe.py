@@ -14,7 +14,8 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-    def test_multiplication_null(self):
+    
+    def test_multiplication_null1(self):
         '''multiplication 0 mit zahl soll 0 ergeben'''
         # Arrange
         input1 = 0
@@ -24,7 +25,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 0
     
-    def test_multiplication_null(self):
+    def test_multiplication_null2(self):
         '''multiplication zahl mit 0 soll 0 ergeben'''
         # Arrange
         input1 = 5
@@ -34,7 +35,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 0
     
-    def test_multiplication_null(self):
+    def test_multiplication_null3(self):
         '''multiplication 0 mit 0 soll 0 ergeben'''
         # Arrange
         input1 = 0
