@@ -14,6 +14,18 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
+    
+    def test_multiplikation_mit_null(self):
+        '''Multiplikation mit 0 sollte 0 ergeben'''
+        # Arrange
+        inputs = [(0, 5), (5, 0), (0, 0)]
+        expected = [0, 0, 0]
+        
+        # Act
+        results = [dumme_multiplikation(a, b) for a, b in inputs]
+        
+        # Assert
+        assert results == expected
 
 
 
