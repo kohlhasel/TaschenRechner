@@ -93,7 +93,7 @@ class TestAufgabeZwei():
         assert set(result) == {6,7,8,9,10} #unabhängig von der Reihenfolge
 
 
-    def test_findet_hoechste_5_implementation_2(self):
+    def test_findet_hoechste_5_implementation_2(self): 
         #Arrange
         liste=[1,2,3,4,5,6,7,8,9,10]
         #Act
