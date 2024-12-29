@@ -6,7 +6,7 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''Multiplikation verhält sich so wie man es erwartet'''
+        '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
@@ -14,7 +14,7 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-
+    
     def test_multiplication_null1(self):
         '''multiplication 0 mit zahl soll 0 ergeben'''
         # Arrange
@@ -44,7 +44,7 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 0
-
+ 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
@@ -90,7 +90,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == {6,7,8,9,10} #unabhängig von der Reihenfolge
 
 
     def test_findet_hoechste_5_implementation_2(self):
@@ -99,5 +99,4 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
-
+        assert set(result) == {6,7,8,9,10} #unabhängig von der Reihenfolge
