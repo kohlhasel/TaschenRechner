@@ -2,6 +2,8 @@ from typing import List
 
 
 def dumme_multiplikation(a:int, b:int):
+     if a == 0 or b == 0:  # Multiplikation mit 0 ergibt 0
+        return 0
     if a == 1:
         return b
     if b ==1:
