@@ -73,3 +73,37 @@ class TestAufgabeZwei():
         #Assert
         assert result == [6,7,8,9,10]
 
+def test_multiplikation_mit_neutralen_elementen(self):
+    '''Testet Multiplikation mit 1 und 0, die als neutrale Elemente korrekt behandelt werden müssen'''
+    # Arrange
+    faktor1 = 1
+    faktor2 = 7
+    # Act
+    result = dumme_multiplikation(faktor1, faktor2)
+    # Assert
+    assert result == faktor2
+
+    # Arrange
+    faktor1 = 0
+    faktor2 = 5
+    # Act
+    result = dumme_multiplikation(faktor1, faktor2)
+    # Assert
+    assert result == 0
+
+    # Arrange
+    faktor1 = 7
+    faktor2 = 1
+    # Act
+    result = dumme_multiplikation(faktor1, faktor2)
+    # Assert
+    assert result == faktor1
+
+    # Arrange
+    faktor1 = 0
+    faktor2 = 0
+    # Act
+    result = dumme_multiplikation(faktor1, faktor2)
+    # Assert
+    assert result == 0
+
