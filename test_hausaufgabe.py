@@ -15,7 +15,35 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
+def test_multiplication_null1(self):
+        '''Multiplikation 0 mit zahl soll 0 ergeben'''
+        # Arrange
+        input1 = 0
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+    
+    def test_multiplication_null2(self):
+        '''Multiplikation zahl mit 0 soll 0 ergeben'''
+        # Arrange
+        input1 = 5
+        input2 = 0
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+    
+    def test_multiplication_null3(self):
+        '''Multiplikation 0 mit 0 soll 0 ergeben'''
+        # Arrange
+        input1 = 0
+        input2 = 0
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
