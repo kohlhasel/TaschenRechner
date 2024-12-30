@@ -6,7 +6,7 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''addition verhält sich so wie man es erwartet'''
+        '''Multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
@@ -14,8 +14,8 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-
-def test_multiplication_null1(self):
+    
+    def test_multiplication_null1(self):
         '''Multiplikation 0 mit zahl soll 0 ergeben'''
         # Arrange
         input1 = 0
@@ -44,7 +44,7 @@ def test_multiplication_null1(self):
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 0
-
+ 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
@@ -78,36 +78,24 @@ def test_multiplication_null1(self):
             #Assert
             assert result == expected
 
-def test_multiplikation_mit_null(self):
-        '''Multiplikation mit 0 ergibt immer 0'''
-        inputs = [
-            (0, 5),    
-            (5, 0),    
-            (0, 0)     
-        ]
-        for a, b in inputs:
-            result = dumme_multiplikation(a, b)
-            assert result == 0
+
 
 
 class TestAufgabeZwei():
     #Sowohl implementation2 als auch implementation sind valide Antworten um die höchsten n elemente einer Liste zu finden.
     # Was wurde bei der Auswahl der Asserts falsch gemacht, sodass einer der Tests scheitert und der andere erfolgreich ist?
     def test_findet_hoechste_5_implementation_1(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_1(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
-
+        # Arrange
+        liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        # Act
+        result = groesste_n_zahlen_implementation_1(liste, 5)
+        # Assert
+        assert set(result) == {6, 7, 8, 9, 10}  # Unabhängig von der Reihenfolge
 
     def test_findet_hoechste_5_implementation_2(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_2(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
-
-
+        # Arrange
+        liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        # Act
+        result = groesste_n_zahlen_implementation_2(liste, 5)
+        # Assert
+        assert set(result) == {6, 7, 8, 9, 10}  # Unabhängig von der Reihenfolge
