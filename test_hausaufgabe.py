@@ -6,7 +6,7 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''addition verhält sich so wie man es erwartet'''
+        '''multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
