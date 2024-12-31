@@ -15,6 +15,24 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_muliplikation_mit_null(self):
+        ''' Multiplikation mit 0 ergibt immer 0 '''
+        # Arrange
+        input1 = 0
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+
+        # Arrange
+        input1 = 7
+        input2 = 0
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
@@ -29,16 +47,12 @@ class TestAufgabeEins():
         '''1 ist neutrales Element der multiplikation <==> a*1=a '''
         # Arrange
         input = 5
-        # Act
+        # Act für a = 1
         result = dumme_multiplikation(1, input)
         # Assert
         assert result == input
-
-    def test_1_neutrales_element_reversed(self):
-        ''' 1 ist neutrales Element der multiplikation <==> 1*b=b '''
-        # Arrange
-        input = 5
-        # Act
+        
+        # Act für b = 1
         result = dumme_multiplikation(input, 1)
         # Assert
         assert result == input
