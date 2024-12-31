@@ -15,7 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-     def test_multiplikation_null(self):
+    def test_multiplikation_null(self):
         '''multiplikation mit 0 soll 0 ergeben'''
         # Arrange
         input1 = 5
