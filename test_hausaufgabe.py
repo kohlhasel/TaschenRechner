@@ -18,15 +18,14 @@ class TestAufgabeEins():
     def test_multiplikation_null(self):
         '''multiplikation mit 0 soll 0 ergeben'''
         # Arrange
-        input1 = 5
-        input2 = 0
+        a, b = 0, 5
+        c, d = 5, 0
         # Act
-        result = dumme_multiplikation(input1, input2)
+        result1 = dumme_multiplikation(a, b)
+        result2 = dumme_multiplikation(c, d)
         # Assert
-        assert result == 0
-
-
-
+        assert result1 == 0 
+        assert result2 == 0 
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
