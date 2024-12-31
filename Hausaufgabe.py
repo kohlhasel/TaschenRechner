@@ -2,10 +2,12 @@ from typing import List
 
 
 def dumme_multiplikation(a:int, b:int):
+    if == a or b == 0:
+        return 0
     if a == 1:
         return b
     if b ==1:
-        return a+1
+        return a
     else:
         return dumme_multiplikation(a-1,b-1)+a+b-1
 
