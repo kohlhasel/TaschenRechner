@@ -15,8 +15,16 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
-
+    def test_multiplikation_null(self):
+        '''multiplikation mit 0 soll 0 ergeben'''
+        # Arrange
+        input1 = 5
+        input2 = 0
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+    
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
@@ -63,7 +71,7 @@ class TestAufgabeZwei():
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
         assert result == [6,7,8,9,10]
-
+        assert sorted(result) == sorted([6,7,8,9,10])
 
     def test_findet_hoechste_5_implementation_2(self):
         #Arrange
@@ -72,4 +80,4 @@ class TestAufgabeZwei():
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
         assert result == [6,7,8,9,10]
-
+        assert sorted(result) == sorted([6,7,8,9,10])
