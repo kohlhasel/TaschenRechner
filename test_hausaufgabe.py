@@ -70,12 +70,14 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-      assert set(result) == {6,7,8,9,10} #unabhängig von der Reihenfolge
-    
+        assert sorted(result) == sorted([6,7,8,9,10])
+
+
+
     def test_findet_hoechste_5_implementation_2(self):
         #Arrange
         liste=[1,2,3,4,5,6,7,8,9,10]
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert set(result) == {6,7,8,9,10} #unabhängig von der Reihenfolge
+        assert sorted(result) == sorted([6,7,8,9,10])
