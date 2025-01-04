@@ -15,6 +15,17 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_multiplikation_mit_null(self):
+        '''Multiplikation mit 0 ergibt 0'''
+        # Arrange
+        input1 = 8
+        input2 = 0
+        # Act
+        result1 = dumme_multiplikation(input1, input2)
+        result2 = dumme_multiplikation(input2, input1)
+        # Assert
+        assert result1 == 0  # Erwartet: 8 * 0 = 0
+        assert result2 == 0  # Erwartet: 0 * 8 = 0
 
 
     def test_assoziativ(self):
