@@ -10,10 +10,15 @@ class TestAufgabeEins():
         # Arrange
         input1 = 5
         input2 = 6
+        input3 = 0 
         # Act
-        result = dumme_multiplikation(input1, input2)
+        result1 = dumme_multiplikation(input1, input2)
+        result2 = dumme_multiplikation(input2, input3)
+        result3 = dumme_multiplikation(input3, input2)
         # Assert
-        assert result == 30
+        assert result1 == 30
+        assert result2 == 0
+        assert result3 == 0
 
 
 
