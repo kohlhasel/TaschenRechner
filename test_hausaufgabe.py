@@ -6,28 +6,28 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''Multiplikation verhält sich so wie man es erwartet'''
+        '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
         # Act
         result = dumme_multiplikation(input1, input2)
         # Assert
-        assert result1 == 30
+        assert result == 30
 
     def test_multiplikation_mit_null(self):
-    '''Multiplikation mit Null ergibt Null'''
-    # Arrange
-    input3 = 0
-    input4 = 10
-    # Act
-    result1 = dumme_multiplikation(input3, input4)
-    result2 = dumme_multiplikation(input4, input3)
-    result3 = dumme_multiplikation(0, 0)
-    # Assert
-    assert result1 == 0
-    assert result2 == 0
-    assert result3 == 0
+        '''Multiplikation mit Null ergibt Null'''
+        # Arrange
+        input3 = 0
+        input4 = 10
+        # Act
+        result1 = dumme_multiplikation(input3, input4)
+        result2 = dumme_multiplikation(input4, input3)
+        result3 = dumme_multiplikation(0, 0)
+        # Assert
+        assert result1 == 0
+        assert result2 == 0
+        assert result3 == 0
 
 
 
