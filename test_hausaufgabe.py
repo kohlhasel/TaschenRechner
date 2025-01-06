@@ -15,6 +15,16 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_multiplikation_mit_null_a(self):
+        # Arrange
+        input1 = 0
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 0
+
+
     def test_both_ones(self):
         '''1 * 1 sollte 1 ergeben'''
         # Arrange
