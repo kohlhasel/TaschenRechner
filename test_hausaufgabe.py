@@ -6,7 +6,7 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''addition verhält sich so wie man es erwartet'''
+        '''Multiplikation verhält sich wie erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
@@ -15,6 +15,27 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_input2_kleiner_als_input1(self):
+        '''Multiplikation sollte auch korrekt sein, wenn der zweite Faktor kleiner ist als der erste'''
+        # Arrange
+        input1 = 6
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 30
+
+    def test_reihenfolge_der_faktoren(self):
+        '''Multiplikation ist kommutativ <==> a*b = b*a'''
+        # Arrange
+        input1 = 6
+        input2 = 5
+        # Act
+        result1 = dumme_multiplikation(input1, input2)
+        result2 = dumme_multiplikation(input2, input1)
+        # Assert
+        assert result1 == result2
+        assert result1 == 30
 
 
     def test_assoziativ(self):
