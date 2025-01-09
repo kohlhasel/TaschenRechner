@@ -15,7 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
+    def test_happy_path2(self):
+        '''Multiplikation verhält sich so wie man es erwartet'''
+        # Arrange
+        input1 = 5
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
