@@ -15,7 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
+    def test_happy_path_edge_case(self):
+        '''Testet Multiplikation im Grenzfall mit einem Faktor von 1.'''
+        # Arrange
+        input1 = 1  # Grenzfall
+        input2 = 6
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 6  # Erwartetes Ergebnis: Multiplikation mit 1
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
