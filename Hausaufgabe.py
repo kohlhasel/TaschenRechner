@@ -1,7 +1,7 @@
 from typing import List
 
 
-def dumme_multiplikation(a:int, b:int):
+def dumme_multiplikation(a: int, b: int):
     if a == 0 or b == 0:  # Multiplikation mit 0
         return 0
     if a == 1:
@@ -9,8 +9,12 @@ def dumme_multiplikation(a:int, b:int):
     if b == 1:
         return a
     else:
-        return a + dumme_multiplikation(a, b - 1)  # Rekursive Multiplikation
-
+        # Rekursive Multiplikation unter der Annahme, dass wir die kleinere Zahl immer reduzieren
+        if a > b:
+            return b + dumme_multiplikation(a, b - 1)
+        else:
+            return a + dumme_multiplikation(a - 1, b)
+            
 def groesste_n_zahlen_implementation_1(liste:List[int], n:int):
     return sorted(liste)[-n:]
 
