@@ -2,7 +2,6 @@ from typing import List
 
 
 def dumme_multiplikation(a:int, b:int):
-    
     if a == 1:
         return b
     if b == 1:
