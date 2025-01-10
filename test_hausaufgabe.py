@@ -14,6 +14,29 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
+
+    def test_kommutativitaet(self):
+    '''Multiplikation sollte kommutativ sein: a*b = b*a'''
+    # Arrange
+    input1 = 6
+    input2 = 5
+    # Act
+    result1 = dumme_multiplikation(input1, input2)
+    result2 = dumme_multiplikation(input2, input1)
+    # Assert
+    assert result1 == result2  # Überprüfen, dass beide Reihenfolgen dasselbe Ergebnis liefern
+    assert result1 == 30  # Überprüfen, dass das Ergebnis korrekt ist
+
+
+    def test_input2_kleiner_als_input1(self):
+        '''Multiplikation sollte auch korrekt sein, wenn der zweite Faktor kleiner ist als der erste'''
+        # Arrange
+        input1 = 6
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 30
     
     def test_fehlerhafte_konstellation(self):
         '''Multiplikation funktioniert korrekt für zwei gleiche Zahlen größer als 1'''
