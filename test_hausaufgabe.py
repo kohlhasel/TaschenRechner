@@ -6,7 +6,7 @@ from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1
 
 class TestAufgabeEins():
     def test_happy_path(self):
-        '''addition verhält sich so wie man es erwartet'''
+        '''multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
         input2 = 6
@@ -15,6 +15,17 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+        def test_happy_path_weiterer_Testfall(self):
+        '''Multiplikation, wenn input 2 kleiner ist als input 1'''
+        # Arrange
+        input1 = 8
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 40
+        
+
     def test_multiplikation_mit_null(self):
         '''Die Multiplikation mit 0 soll 0 ergeben'''
         # Arrange
@@ -22,6 +33,7 @@ class TestAufgabeEins():
         input2 = 0
         # Act
         result = dumme_multiplikation(input1, input2)
+        result = dumme_multiplikation(input2, input1)
         # Assert
         assert result == 0
 
