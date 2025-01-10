@@ -18,12 +18,12 @@ class TestAufgabeEins():
     def test_happy_path_weiterer_Testfall(self):
         '''Multiplikation, wenn input 2 kleiner ist als input 1'''
        ' # Arrange
-        input1 = 8
-        input2 = 5
+        input1 = 3
+        input2 = 2
         # Act
         result = dumme_multiplikation(input1, input2)
         # Assert
-        assert result == 40
+        assert result == 6
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
