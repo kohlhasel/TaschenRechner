@@ -16,8 +16,8 @@ class TestAufgabeEins():
         assert result == 30
         
     def test_kommutativitaet(self):
-    '''Testet die Kommutativität der Multiplikation <==> a * b = b * a'''
-         # Arrange
+        '''testet die Kommutativität der Multiplikation, auch wenn eine Zahl 1 ist <==> a * b = b * a'''
+        # Arrange
         input1 = 1
         input2 = 6
         # Act
