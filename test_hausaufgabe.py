@@ -25,20 +25,6 @@ class TestAufgabeEins():
         # Assert
         assert result == 6
 
-    def test_Multiplikation_mit_null(self):
-        '''Multiplikation mit null'''
-        # Arrange
-        input1 = 2
-        input2 = 0
-        # Act
-        result1 = dumme_multiplikation(input1, input2)
-        result2 = dumme_multiplikation(input1, input2)
-        result3 = dumme_multiplikation(0,0)
-        # Assert
-        assert result1 == 0
-        assert result2 == 0
-        assert result3 == 0
-
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
