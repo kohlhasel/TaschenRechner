@@ -15,6 +15,18 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
         
+    def test_kommutativitaet(self):
+    '''Testet die Kommutativität der Multiplikation <==> a * b = b * a'''
+         # Arrange
+        input1 = 1
+        input2 = 6
+        # Act
+        result_1 = dumme_multiplikation(input1, input2)
+        result_2 = dumme_multiplikation(input2, input1)
+        # Assert
+        assert result_1 == result_2
+        
+        
     def test_multiplikation_null(self):
         '''multiplikation mit 0 soll 0 ergeben'''
         # Arrange
