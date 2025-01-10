@@ -15,7 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-        def test_happy_path_weiterer_Testfall(self):
+    def test_happy_path_weiterer_Testfall(self):
         '''Multiplikation, wenn input 2 kleiner ist als input 1'''
         # Arrange
         input1 = 8
