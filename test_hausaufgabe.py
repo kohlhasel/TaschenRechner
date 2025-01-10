@@ -33,7 +33,6 @@ class TestAufgabeEins():
         input2 = 0
         # Act
         result = dumme_multiplikation(input1, input2)
-        result = dumme_multiplikation(input2, input1)
         # Assert
         assert result == 0
 
