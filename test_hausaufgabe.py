@@ -17,7 +17,7 @@ class TestAufgabeEins():
 
     def test_happy_path_weiterer_Testfall(self):
         '''Multiplikation, wenn input 2 kleiner ist als input 1'''
-       ' # Arrange
+        # Arrange
         input1 = 3
         input2 = 2
         # Act
