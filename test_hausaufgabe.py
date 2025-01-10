@@ -14,7 +14,16 @@ class TestAufgabeEins():
         result = dumme_multiplikation(input1, input2)
         # Assert
         assert result == 30
-
+    
+    def test_fehlerhafte_konstellation(self):
+        '''Multiplikation funktioniert korrekt für zwei gleiche Zahlen größer als 1'''
+        # Arrange
+        input1 = 4
+        input2 = 4
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 16
 
     def test_multiplikation_mit_null(self):
         '''multiplikation mit 0 sollte immer 0 ergeben'''
