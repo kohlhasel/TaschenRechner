@@ -15,15 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-    'def test_happy_path_weiterer_Testfall(self):
+    def test_happy_path_weiterer_Testfall(self):
         '''Multiplikation, wenn input 2 kleiner ist als input 1'''
        ' # Arrange
-       ' input1 = 8
-       ' input2 = 5
-       ' # Act
-       ' result = dumme_multiplikation(input1, input2)
+        input1 = 8
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
         # Assert
-      '  assert result == 40
+        assert result == 40
         
 
     def test_multiplikation_mit_null(self):
