@@ -6,11 +6,12 @@ def dumme_multiplikation(a: int, b: int):
     if a == 0 or b == 0:
         return 0
     if a == 1:
-        return b
+        return b  # a * 1 = b, das ist korrekt
     if b == 1:
-        return a + 1
+        return a  # b * 1 = a, das ist korrekt
     else:
-        return dumme_multiplikation(a - 1, b - 1) + a + b - 1
+        return a * b  # Die richtige Multiplikation der beiden Zahlen
+
 
 
 def groesste_n_zahlen_implementation_1(liste:List[int], n:int):
