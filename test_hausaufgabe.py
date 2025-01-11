@@ -8,12 +8,12 @@ class TestAufgabeEins():
     def test_happy_path(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
-        input1 = 2
+        input1 = 3
         input2 = 2
         # Act
         result = dumme_multiplikation(input1, input2)
         # Assert
-        assert result == 4
+        assert result == 6
 
     def test_muliplikation_mit_null(self):
         ''' Multiplikation mit 0 ergibt immer 0 '''
