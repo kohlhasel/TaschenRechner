@@ -15,6 +15,17 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+        # Test Input 1
+        input1 = 1
+        input2 = 7
+        result = dumme_multiplikation(input1, input2)
+        assert result == 7
+
+        input1 = 8
+        input2 = 1
+        result = dumme_multiplikation(input1, input2)
+        assert result == 8
+
 
 
     def test_assoziativ(self):
