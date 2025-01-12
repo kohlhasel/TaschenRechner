@@ -15,7 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
+def test_happy_path_weiterer_Testfall(self):
+        '''Multiplikation, wenn Input 2 kleiner als Input 1'''
+        # Arrange
+        input1 = 3
+        input2 = 2
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 6
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
