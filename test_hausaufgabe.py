@@ -15,7 +15,25 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_b_ist_eins(self):
+        '''Multiplikation funktioniert für alle Fälle, in denen b<a ist'''
+        # Arrange
+        input1 = 8
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 8
 
+    def test_a_ist_eins(self):
+        '''Multiplikation funktioniert für alle Fälle, in denen a<b ist'''
+        # Arrange
+        input1 = 1
+        input2 = 5
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
