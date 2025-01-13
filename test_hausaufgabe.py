@@ -26,7 +26,7 @@ class TestAufgabeEins():
         assert result == 0
 
     def test_multiplication_b_wert_1(self):
-        '''addition mit 0 soll 0 ergeben'''
+        '''addition von a mit b = 1 soll a ergeben, also hier 5'''
         # Arrange
         input1 = 5
         input2 = 1
