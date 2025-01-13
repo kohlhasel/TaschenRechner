@@ -25,6 +25,16 @@ class TestAufgabeEins():
         # Assert
         assert result == 0
 
+    def test_multiplication_b_wert_1(self):
+        '''addition mit 0 soll 0 ergeben'''
+        # Arrange
+        input1 = 5
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
+
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
