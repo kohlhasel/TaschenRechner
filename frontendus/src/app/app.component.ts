@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       console.log(JSON.stringify(response))})
   }
 
-  
+
 
   faktor = new FormControl('')
 
@@ -64,6 +64,23 @@ getBackendUrl(){
 queryBackend(){
   if(this.operation == "+"){
     fetch(this.getBackendUrl() + '/add', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ "wert1": this.value, "wert2": this.faktor.getRawValue() })
+})
+   .then(response => response.json())
+   .then(response => {
+    this.value = response;
+    this.faktor.setValue('')
+    console.log(JSON.stringify(response))})
+  }
+  if(this.operation == "/"){
+     console.log('Division')
+
+    fetch(this.getBackendUrl() + '/div', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
