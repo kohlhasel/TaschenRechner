@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       console.log(JSON.stringify(response))})
   }
 
-  
+
 
   faktor = new FormControl('')
 
@@ -52,10 +52,10 @@ getBackendUrl(){
 
   if (location.href.includes('3.74.107.199:85')){
     console.log('prod')
-    return 'http://3.74.107.199:86'
+    return 'http://18.199.105.236:86'
   }
   console.log('dev')
-  return  'http://3.74.107.199:10086'
+  return  'http://18.199.105.236:10086'
 
 }
 
