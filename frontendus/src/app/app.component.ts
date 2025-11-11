@@ -78,7 +78,6 @@ queryBackend(){
     console.log(JSON.stringify(response))})
   }
   if(this.operation == "/"){
-     console.log('Division')
 
     fetch(this.getBackendUrl() + '/div', {
     method: 'POST',
