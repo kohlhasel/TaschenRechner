@@ -78,7 +78,6 @@ queryBackend(){
     console.log(JSON.stringify(response))})
   }
   if(this.operation == "/"){
-    alert('ES hat funktioniert')
     fetch(this.getBackendUrl() + '/div', {
     method: 'POST',
     headers: {
