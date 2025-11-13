@@ -77,6 +77,22 @@ queryBackend(){
     this.faktor.setValue('')
     console.log(JSON.stringify(response))})
   }
+  if(this.operation == "/"){
+    alert('ES hat funktioniert')
+    fetch(this.getBackendUrl() + '/div', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ "wert1": this.value, "wert2": this.faktor.getRawValue() })
+})
+   .then(response => response.json())
+   .then(response => {
+    this.value = response;
+    this.faktor.setValue('')
+    console.log(JSON.stringify(response))})
+  }
   if(this.operation == "*"){
 
     fetch(this.getBackendUrl() + '/mul', {
