@@ -35,6 +35,7 @@ def test_addition(client):
     data = result.data.decode()
     assert data == '10'
 
+
 def test_subtraktion(client):
     """Wenn Subtraktion abgefragt wird, dann kommen plausible Werte raus"""
     #Arrange

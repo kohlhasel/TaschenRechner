@@ -256,3 +256,28 @@ class TestMultiplikation:
             # Act & Assert
             with pytest.raises(ValueError):
                 result = sut.multiplikation(input1, input2)
+
+class TestSchlecht():
+    class AdditionErgebnis():
+        ausgegebenes_ergebnis: int
+        richtiges_ergebnis: int
+    def fehlerhafte_addition(self,a,b):
+        ret = self.AdditionErgebnis()
+
+        ret.richtiges_ergebnis = a+b
+        ret.ausgegebenes_ergebnis = ret.richtiges_ergebnis + 1
+        return ret
+
+    def fehlerfrei_addition(self,a,b):
+        ret= self.AdditionErgebnis()
+        ret.richtiges_ergebnis = a+b
+        ret.ausgegebenes_ergebnis = ret.richtiges_ergebnis
+        return ret
+    def test_addition_1(self):
+        # Arrange
+        input1 = 2
+        input2 = 3
+        # Act
+        result = self.fehlerhafte_addition(input1,input2)
+        # Assert
+        assert result.richtiges_ergebnis==5

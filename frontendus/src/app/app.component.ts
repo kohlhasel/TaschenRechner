@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       console.log(JSON.stringify(response))})
   }
 
-  
+
 
   faktor = new FormControl('')
 
@@ -50,12 +50,12 @@ getBackendUrl(){
     return 'http://localhost:8100'
   }
 
-  if (location.href.includes('3.74.107.199:85')){
+  if (location.href.includes('3.72.104.151:85')){
     console.log('prod')
-    return 'http://3.74.107.199:86'
+    return 'http://3.72.104.151:86'
   }
   console.log('dev')
-  return  'http://3.74.107.199:10086'
+  return  'http://3.72.104.151:10086'
 
 }
 
@@ -64,6 +64,21 @@ getBackendUrl(){
 queryBackend(){
   if(this.operation == "+"){
     fetch(this.getBackendUrl() + '/add', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ "wert1": this.value, "wert2": this.faktor.getRawValue() })
+})
+   .then(response => response.json())
+   .then(response => {
+    this.value = response;
+    this.faktor.setValue('')
+    console.log(JSON.stringify(response))})
+  }
+  if(this.operation == "/"){
+    fetch(this.getBackendUrl() + '/div', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
