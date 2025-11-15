@@ -1,4 +1,4 @@
-'''4.1 -- Dominik Geissler'''
+VERSION: "4.1 -- Dominik Geissler"
 
 import pytest
 
