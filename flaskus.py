@@ -1,5 +1,3 @@
-VERSION: "4.1 -- Dominik Geissler" 
-
 import flask
 from flask import Flask
 from waitress import serve
@@ -22,7 +20,7 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "4.0 -- Lukas Kohlhase"}
+    return {"version": "4.1 -- Dominik Geissler"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
