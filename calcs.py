@@ -1,4 +1,4 @@
-4.1 -- Dominik Geissler
+'''4.1 -- Dominik Geissler'''
 
 from pydantic import BaseModel
 
