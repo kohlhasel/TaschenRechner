@@ -21,6 +21,8 @@ class Taschenrechner(BaseModel):
     def subtraktion(self, a, b):
         return self.converter.str_to_int(a) - self.converter.str_to_int(b)
 
+    def multiplikation(self, a, b):
     return self.converter.str_to_int(a) * self.converter.str_to_int(b)
+
 
 
