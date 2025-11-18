@@ -130,7 +130,7 @@ class TestSubtraktion:
         assert result == expected
 
     class TestFalscheInputs():
-        '''subtraktion gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
+        '''subtraktion gibt valueErrors zurück, wenn der input sich nicht sauber zu einer Zahl verarbeiten lässt'''
         def test_falscher_input_zuerst(self):
             #Arrange
             sut = Taschenrechner()
