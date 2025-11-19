@@ -20,12 +20,12 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "4.0 -- Lukas Kohlhase"}
+    return {"version": "5.0 -- Lea Hübner"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.addition(requestinfos['wert1'],requestinfos['wert2']))
 @APP.route('/div', methods=['POST'])
 def division_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
