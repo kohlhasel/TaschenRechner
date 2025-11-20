@@ -171,7 +171,7 @@ class TestMultiplikation:
         assert result == 30
 
     def test_kommutativ(self):
-        '''mMltiplikation ist kommutativ <==> a*b=b*a'''
+        '''Multiplikation ist kommutativ <==> a*b=b*a'''
         #Arrange
         sut = Taschenrechner()
         input1=5
