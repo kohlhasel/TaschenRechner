@@ -20,7 +20,7 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "4.1 -- stsiws25_5"}
+    return {"version": "4.1 -- Altin Gashi"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
