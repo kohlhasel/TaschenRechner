@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 class StringKonverter(BaseModel):
-    def str_to_int(self, zahl: str):
+    def str_to_int(self, zahl: str): 
         try:
             return int(zahl)
         except:
