@@ -15,7 +15,17 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-    def test_multiplikation_mit_eins(self):
+    def test_multiplikation_mit_a_eins(self):
+        '''multiplikation mit 1 verhält sich mathematisch korrekt'''
+        # Arrange
+        input1 = 1
+        input2 = 4
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 4
+
+    def test_multiplikation_mit_b_eins(self):
         '''multiplikation mit 1 verhält sich mathematisch korrekt'''
         # Arrange
         input1 = 5
