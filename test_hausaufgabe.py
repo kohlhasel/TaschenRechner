@@ -72,4 +72,8 @@ class TestAufgabeZwei():
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
         assert result == [6,7,8,9,10]
+    def test_reihenfolge_unabhaengig(self):
+        assert dumme_multiplikation(2, 3) == 6
+        assert dumme_multiplikation(3, 2) == 6
+
 
