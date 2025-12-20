@@ -15,6 +15,11 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    
+    def test_unsymmetrisch(self):
+        # Prüft, ob die Multiplikation auch bei unterschiedlichen Zahlen korrekt ist
+        assert dumme_multiplikation(2, 3) == 6
+        assert dumme_multiplikation(3, 2) == 6
 
 
     def test_assoziativ(self):
