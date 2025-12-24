@@ -15,7 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-     def test_multiplikation_mit_eins_rechts(self):
+    def test_multiplikation_mit_eins_rechts(self):
         '''Multiplikation mit 1 als rechtem Operand'''
         # Arrange
         input1 = 5
