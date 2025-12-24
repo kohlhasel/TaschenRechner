@@ -4,7 +4,7 @@ import requests as requests
 from Hausaufgabe import dumme_multiplikation, groesste_n_zahlen_implementation_1, groesste_n_zahlen_implementation_2
 
 
-class TestAufgabeEins():
+class TestAufgabeEins():  
     def test_happy_path(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
