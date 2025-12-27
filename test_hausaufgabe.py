@@ -36,6 +36,15 @@ class TestAufgabeEins():
         # Assert
         assert result == input
 
+    def test_1_neutrales_element_rechts(self):
+        '''1 ist neutrales Element der multiplikation <==> a*1=a '''
+        # Arrange
+        input = 5
+        # Act
+        result = dumme_multiplikation(input, 1)
+        # Assert
+        assert result == input
+
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
                                      (1, 2, 2, 'positiv * positiv'),
