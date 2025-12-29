@@ -36,6 +36,15 @@ class TestAufgabeEins():
         # Assert
         assert result == input
 
+    def test_1_neutrales_element_rechts(self):
+        '''1 ist neutrales Element der Multiplikation <==> a*1 = a'''
+        # Arrange
+        input = 5
+        # Act
+        result = dumme_multiplikation(input, 1)
+        # Assert
+        assert result == input
+
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
                                      (1, 2, 2, 'positiv * positiv'),
@@ -56,20 +65,21 @@ class TestAufgabeEins():
 class TestAufgabeZwei():
     #Sowohl implementation2 als auch implementation sind valide Antworten um die höchsten n elemente einer Liste zu finden.
     # Was wurde bei der Auswahl der Asserts falsch gemacht, sodass einer der Tests scheitert und der andere erfolgreich ist?
-    def test_findet_hoechste_5_implementation_1(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_1(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
-
-
+       def test_findet_hoechste_5_implementation_1(self):
+        # Arrange
+        liste = [1,2,3,4,5,6,7,8,9,10]
+        # Act
+        result = groesste_n_zahlen_implementation_1(liste, 5)
+        # Assert
+        assert sorted(result) == [6,7,8,9,10]
+    
+    
     def test_findet_hoechste_5_implementation_2(self):
-        #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
-        #Act
-        result = groesste_n_zahlen_implementation_2(liste,5)
-        #Assert
-        assert result == [6,7,8,9,10]
+        # Arrange
+        liste = [1,2,3,4,5,6,7,8,9,10]
+        # Act
+        result = groesste_n_zahlen_implementation_2(liste, 5)
+        # Assert
+        assert sorted(result) == [6,7,8,9,10]
+
 
