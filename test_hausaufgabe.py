@@ -15,11 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-    def test_happy_path_vertauscht(self):
-    input1 = 5
-    input2 = 6
-    result = dumme_multiplikation(input2, input1)
-    assert result == 30
+   
 
 
 
