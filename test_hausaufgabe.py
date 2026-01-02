@@ -16,7 +16,6 @@ class TestAufgabeEins():
         assert result == 30
 
 
-
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
