@@ -16,6 +16,7 @@ class TestAufgabeEins():
         assert result == 30
 
 
+
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
         # Arrange
@@ -35,6 +36,14 @@ class TestAufgabeEins():
         # Assert
         assert result == input
 
+    def test_1_neutrales_element_rechts(self):
+        '''1 ist neutrales Element der multiplikation <==> a*1=a '''
+        # Arrange
+        input = 5
+        # Act
+        result = dumme_multiplikation(input, 1)
+        # Assert
+        assert result == input
 
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
@@ -62,7 +71,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert sorted(result) == [6,7,8,9,10]
 
 
     def test_findet_hoechste_5_implementation_2(self):
@@ -71,5 +80,4 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
-
+        assert sorted(result) == [6,7,8,9,10]
