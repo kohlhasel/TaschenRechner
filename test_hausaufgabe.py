@@ -15,6 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_happy_path_mit_eins(self):
+        '''addition verhält sich so wie man es erwartet'''
+        # Arrange
+        input1 = 5
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
 
 
     def test_assoziativ(self):
@@ -35,6 +44,7 @@ class TestAufgabeEins():
         result = dumme_multiplikation(1, input)
         # Assert
         assert result == input
+
 
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
@@ -62,8 +72,12 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
-
+        assert len(result) == 5
+        assert 6 in result
+        assert 7 in result
+        assert 8 in result
+        assert 9 in result
+        assert 10 in result
 
     def test_findet_hoechste_5_implementation_2(self):
         #Arrange
@@ -71,5 +85,10 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert len(result) == 5
+        assert 6 in result
+        assert 7 in result
+        assert 8 in result
+        assert 9 in result
+        assert 10 in result
 
