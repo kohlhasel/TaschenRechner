@@ -16,8 +16,7 @@ class TestAufgabeEins():
         assert result == 30
 
     def test_happy_path_Zahlen_vertauscht(self):
-        '''Testet die Multiplikation mit vertauschter Reihenfolge der Parameter'''
-         # Arrange
+          # Arrange
         input1 = 6
         input2 = 5
         # Act
