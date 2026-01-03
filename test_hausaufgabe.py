@@ -15,6 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_happy_path_mit_eins(self):
+        '''addition verhält sich so wie man es erwartet'''
+        # Arrange
+        input1 = 5
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
 
 
     def test_assoziativ(self):
@@ -36,14 +45,6 @@ class TestAufgabeEins():
         # Assert
         assert result == input
 
-     def test_1_neutrales_element_zusatz(self):
-        '''1 ist neutrales Element der multiplikation <==> a*1=a '''
-        # Arrange
-        input = 5
-        # Act
-        result = dumme_multiplikation(input, 1)
-        # Assert
-        assert result == input
 
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
