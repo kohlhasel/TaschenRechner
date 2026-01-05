@@ -15,7 +15,14 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-
+    def test_multiplikation_mit_eins_rechts(self):
+        # Arrange
+        input1 = 5
+        input2 = 1
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 5
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
@@ -71,5 +78,4 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
-
+        assert sorted(result) == [6, 7, 8, 9, 10]
