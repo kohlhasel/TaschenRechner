@@ -15,14 +15,6 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
-    def test_multiplikation_mit_eins_rechts(self):
-        # Arrange
-        input1 = 5
-        input2 = 1
-        # Act
-        result = dumme_multiplikation(input1, input2)
-        # Assert
-        assert result == 5
 
     def test_assoziativ(self):
         '''Multiplikation ist assoziativ <==> (a*b)*c= a*(b*c)'''
@@ -40,6 +32,15 @@ class TestAufgabeEins():
         input = 5
         # Act
         result = dumme_multiplikation(1, input)
+        # Assert
+        assert result == input
+
+      def test_1_neutrales_element_rechts(self):
+        '''1 ist neutrales Element der multiplikation <==> a*1=a '''
+        # Arrange
+        input = 5
+        # Act
+        result = dumme_multiplikation(input, 1)
         # Assert
         assert result == input
 
