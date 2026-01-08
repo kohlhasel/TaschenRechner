@@ -5,7 +5,7 @@ def dumme_multiplikation(a:int, b:int):
     if a == 1:
         return b
     if b ==1:
-        return a+1
+        return a # Das +1 muss entfernt werden
     else:
         return dumme_multiplikation(a-1,b-1)+a+b-1
 
