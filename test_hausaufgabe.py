@@ -37,7 +37,6 @@ class TestAufgabeEins():
         assert result == input
 
     def test_1_neutrales_element_rechts(self):
-        ''' Test der Multiplikation mit 1 (rechts)'''
     # Arrange
     input1 = 5
     input2 = 1
