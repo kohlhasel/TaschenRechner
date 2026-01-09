@@ -36,6 +36,15 @@ class TestAufgabeEins():
         # Assert
         assert result == input
 
+    def test_1_neutrales_element_rechts(self):
+    # Arrange
+    input1 = 5
+    input2 = 1
+    # Act
+    result = dumme_multiplikation(input1, input2)
+    # Assert
+    assert result == 5
+
     @pytest.mark.parametrize("faktor1,faktor2,expected,beschreibung"
             , [
                                      (1, 2, 2, 'positiv * positiv'),
