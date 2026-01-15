@@ -80,5 +80,5 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert set(result) == set(6,7,8,9,10)
+        assert set(result) == set((6,7,8,9,10))
 
