@@ -15,6 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 30
 
+    def test_happy_path_2(self):
+        '''addition verhält sich so wie man es erwartet'''
+        # Arrange
+        input1 = 6
+        input2 = 3
+        # Act
+        result = dumme_multiplikation(input1, input2)
+        # Assert
+        assert result == 18
 
 
     def test_assoziativ(self):
@@ -67,9 +76,9 @@ class TestAufgabeZwei():
 
     def test_findet_hoechste_5_implementation_2(self):
         #Arrange
-        liste=[1,2,3,4,5,6,7,8,9,10]
+        liste=[1,3,2,4,6,5,7,6,8,9,9,10]
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set((6,7,8,9,10))
 
