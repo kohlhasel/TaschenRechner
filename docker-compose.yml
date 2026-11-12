@@ -22,11 +22,11 @@ services:
     ports:
       - 10085:80
   watchtower:
-    image: containrrr/watchtower
+    image: nickfedor/watchtower
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 backend frontend backend_dev frontend_dev
-
+    command: --interval 30 --cleanup backend frontend backend_dev frontend_dev
+    restart: unless-stopped
 volumes:
   jenkins_home:
