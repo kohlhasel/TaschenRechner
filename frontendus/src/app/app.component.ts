@@ -52,10 +52,10 @@ getBackendUrl(){
 
   if (location.href.includes('3.72.104.151:85')){
     console.log('prod')
-    return 'http://3.72.104.151:86'
+    return 'http://16.192.165.134:86'
   }
   console.log('dev')
-  return  'http://3.72.104.151:10086'
+  return  'http://16.192.165.134:10086'
 
 }
 
