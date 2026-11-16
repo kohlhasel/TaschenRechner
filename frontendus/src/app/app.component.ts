@@ -50,7 +50,7 @@ getBackendUrl(){
     return 'http://localhost:8100'
   }
 
-  if (location.href.includes('16.192.165.134:85 ')){
+  if (location.href.includes('3.72.104.151:85')){
     console.log('prod')
     return 'http://16.192.165.134:86'
   }
