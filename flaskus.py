@@ -25,11 +25,6 @@ def version_request():
 @APP.route('/add', methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
-@APP.route('/div', methods=['POST'])
-def division_request():
-    requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.division(requestinfos['wert1'],requestinfos['wert2']))
 
 @APP.route('/sub', methods=['POST'])
 def sub_request():
