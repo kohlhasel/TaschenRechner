@@ -160,7 +160,7 @@ class TestSubtraktion:
 
 class TestMultiplikation:
     def test_happy_path(self):
-        '''multiplikation verhält sich so wie man es erwartet'''
+        '''Multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         sut= Taschenrechner()
         input1 = 5
@@ -171,7 +171,7 @@ class TestMultiplikation:
         assert result == 30
 
     def test_kommutativ(self):
-        '''multiplikation ist kommutative <==> a*b=b*a'''
+        '''Multiplikation ist kommutativ <==> a*b=b*a'''
         #Arrange
         sut = Taschenrechner()
         input1=5
@@ -182,7 +182,7 @@ class TestMultiplikation:
         assert result == sut.multiplikation(input2,input1)
 
     def test_assoziativ(self):
-        '''multiplikation ist assoziativ, a*(b*c) = (a*b)*c'''
+        '''Multiplikation ist assoziativ, a*(b*c) = (a*b)*c'''
         #Arrange
         sut = Taschenrechner()
         input1,input2,input3=[2,3,4]
@@ -220,7 +220,7 @@ class TestMultiplikation:
                                  (-11111111, -22222222, 246913575308642, 'Grosse Negative Zahlen'),
                                  (1111111, 2222222, 2469135308642, 'Grosse positive Zahlen')])
     def test_verschiedene_werte(self, summand1, summand2, expected, beschreibung):
-        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden'''
+        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden.'''
         #Arrange
         sut= Taschenrechner()
         #Act
@@ -229,7 +229,7 @@ class TestMultiplikation:
         assert result == expected
 
     class TestFalscheInputs():
-        '''multiplikation gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
+        '''Multiplikation gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lässt'''
         def test_falscher_input_zuerst(self):
             #Arrange
             sut = Taschenrechner()
