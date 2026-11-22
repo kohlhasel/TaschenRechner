@@ -15,8 +15,12 @@ class Taschenrechner(BaseModel):
     def addition(self, a, b):
         return self.converter.str_to_int(a) + self.converter.str_to_int(b)
 
+    def division(self, a, b):
+        return self.converter.str_to_int(a) / self.converter.str_to_int(b)
+
     def subtraktion(self, a, b):
         return self.converter.str_to_int(a) - self.converter.str_to_int(b)
 
     def multiplikation(self, a, b):
         return self.converter.str_to_int(a) * self.converter.str_to_int(b)
+
